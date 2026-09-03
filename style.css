@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(115, 115, 212);
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: white;
+    padding: 20px;
+    border-bottom: 3px solid black;
+}
+
+nav a {
+    margin: 0 10px;
+    color: rgb(115, 115, 212);
+    font-size: 18px;
+}
+
+section {
+    background-color: white;
+    width: 60%;
+    margin: 30px auto;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
