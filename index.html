@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="stars"></div>
+    <canvas id="starTrails"></canvas>
+
     <header>
         <h1>Hi, I'm Emmanuel</h1>
         <nav>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
-            <a href="#In progress">In progress</a>
+            <a href="#in-progress">In progress</a>
         </nav>
     </header>
 
@@ -31,20 +32,69 @@
         <a href="https://github.com/guardianep">check out my Github profile!</a>
     </section>
 
-    <section id="In progress">
+    <section id="in-progress">
         <h2>In progress</h2>
         <div class="project-card">
             <h3>Home Server Creation</h3>
             <p>Status: Running</p>
-            <h3>Frost museum stem challange</h3>
-            <p>status: in planning stage</p>
+            <h3>Frost museum stem challenge</h3>
+            <p>Status: in planning stage</p>
             <h3>Other Project</h3>
-            <p>status: in development</p>
-            <h3>college Applications</h3>
-            <p>status: in progress</p>
+            <p>Status: in development</p>
+            <h3>College Applications</h3>
+            <p>Status: in progress</p>
             <p>this is very urgent and i should probably focus more time into this 🥀</p>
-
         </div>
     </section>
+
+    <!-- this is the code for the star trails effect
+    on the background of the website. It creates a
+    canvas element and uses JavaScript to animate
+    stars moving in circular paths around the center
+    of the screen. -->
+    <script>
+        const canvas = document.getElementById('starTrails');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+
+        const numStars = 80;
+        const stars = [];
+
+        for (let i = 0; i < numStars; i++) {
+            stars.push({
+                radius: Math.random() * (canvas.width / 2),
+                angle: Math.random() * 2 * Math.PI,
+                speed: 0.000000001 + Math.random() * 0.0002,
+                size: Math.random() * 1.5 + 0.5
+            });
+        }
+
+        function animate() {
+            ctx.fillStyle = 'rgba(0, 0, 16, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            stars.forEach(star => {
+                star.angle += star.speed;
+                const x = centerX + star.radius * Math.cos(star.angle);
+                const y = centerY + star.radius * Math.sin(star.angle);
+                ctx.beginPath();
+                ctx.arc(x, y, star.size, 0, 2 * Math.PI);
+                ctx.fillStyle = 'white';
+                ctx.fill();
+            });
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
 </body>
 </html>
