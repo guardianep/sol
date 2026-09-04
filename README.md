@@ -18,3 +18,7 @@
 ## notes:
 Still very much in progress
 🔗 **Live site:** https://guardianep.github.io/sol/
+
+## credits:
+- @reshiiiram
+    inspired me to add the spacy background, i liked his design a lot and took  much inspiration from him.
