@@ -61,3 +61,34 @@ img {
     height: 100%;
     z-index: -1;
 }
+.blog-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px 0;
+  scroll-snap-direction:x mandatory;
+}
+
+.blog-post {
+  flex : 0 0 auto;
+  width: 220px
+  background-color: #f5f5f5;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: left;
+  snap-scrolling-align: start;
+}
+.blog-post h4 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.blog-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.blog-scroll::-webkit-scrollbar-thumb {
+    background-color: rgb(115, 115, 212);
+    border-radius: 4px;
+}

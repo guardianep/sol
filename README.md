@@ -1,6 +1,6 @@
 # Hello everyone this is a Website project i am doing i want to do this since i have never created a website before without some AI help ofc 😅
 
-# I also wanted to challnage myself since I wanted to learn a markup langueg and thought this would be a cool idea to do. More since this is my last school year and I want to learn as much as i can
+# I also wanted to challenge myself since I wanted to learn a markup language and thought this would be a cool idea to do. More since this is my last school year and I want to learn as much as i can
 
 ## so far this website has the following 
 
@@ -21,4 +21,4 @@ Still very much in progress
 
 ## credits:
 - @reshiiiram
-    inspired me to add the spacy background, i liked his design a lot and took  much inspiration from him.
+    inspired me to add the space background, i liked his design a lot and took  much inspiration from him.
